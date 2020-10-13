@@ -5,6 +5,7 @@
 #include <algorithm>
 
 #include "Adresat.h"
+#include "PlikZAdresatami.h"
 #include "MetodyPomocnicze.h"
 
 
@@ -16,6 +17,7 @@ class AdresatMenedzer
     int idOstatniegoAdresata;
 
     vector<Adresat> adresaci;
+    PlikZAdresatami plikZAdresatami;
 
     Adresat podajDaneNowegoAdresata();
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
