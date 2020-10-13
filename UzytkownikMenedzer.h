@@ -20,7 +20,11 @@ class UzytkownikMenedzer
     bool czyIstniejeLogin(string login);
 
 public:
-    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {};
+    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
+        : plikZUzytkownikami(nazwaPlikuZUzytkownikami),
+          adresatMenedzer(nazwaPlikuZAdresatami) {};
+
+
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
     void ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika);

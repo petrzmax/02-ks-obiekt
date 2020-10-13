@@ -1,11 +1,5 @@
 #include "AdresatMenedzer.h"
 
-AdresatMenedzer::AdresatMenedzer()
-{
-    idZalogowanegoUzytkownika = 0;
-    idOstatniegoAdresata = 0;
-}
-
 void AdresatMenedzer::dodajAdresata()
 {
     Adresat adresat;
