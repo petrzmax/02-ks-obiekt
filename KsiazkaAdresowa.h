@@ -18,6 +18,7 @@ public:
     };
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
     void wypiszWszystkichUzytkownikow();
 };
 
