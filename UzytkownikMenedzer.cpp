@@ -71,6 +71,12 @@ void UzytkownikMenedzer::logowanieUzytkownika()
     idZalogowanegoUzytkownika = 0;
 }
 
+void UzytkownikMenedzer::wylogowanieUzytkownika()
+{
+    idZalogowanegoUzytkownika = 0;
+    //adresaci.clear();
+}
+
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
 {
     string noweHaslo = "";
