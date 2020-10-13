@@ -143,3 +143,7 @@ void UzytkownikMenedzer::dodajAdresata()
     adresatMenedzer.dodajAdresata();
 }
 
+void UzytkownikMenedzer::wyswietlWszystkichAdresatow()
+{
+   adresatMenedzer.wyswietlWszystkichAdresatow();
+}

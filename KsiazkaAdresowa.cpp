@@ -30,3 +30,7 @@ void KsiazkaAdresowa::dodajAdresata()
     uzytkownikMenedzer.dodajAdresata();
 }
 
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+{
+   uzytkownikMenedzer.wyswietlWszystkichAdresatow();
+}

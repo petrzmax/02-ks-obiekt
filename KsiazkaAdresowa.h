@@ -23,6 +23,7 @@ public:
     void zmianaHaslaZalogowanegoUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void dodajAdresata();
+    void wyswietlWszystkichAdresatow();
 };
 
 #endif // KSIAZKAADRESOWA_H
