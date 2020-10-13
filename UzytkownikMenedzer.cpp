@@ -55,20 +55,27 @@ void UzytkownikMenedzer::logowanieUzytkownika()
                 {
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    idZalogowanegoUzytkownika = itr -> pobierzId();
+                    ustawIdZalogowanegoUzytkownika(itr -> pobierzId());
                     return;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-            idZalogowanegoUzytkownika = 0;
+            ustawIdZalogowanegoUzytkownika(0);
             return;
         }
         itr++;
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    idZalogowanegoUzytkownika = 0;
+    ustawIdZalogowanegoUzytkownika(0);
+}
+
+void UzytkownikMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
+{
+    idZalogowanegoUzytkownika = noweIdZalogowanegoUzytkownika;
+    adresatMenedzer.ustawIdZalogowanegoUzytkownika(noweIdZalogowanegoUzytkownika);
+
 }
 
 void UzytkownikMenedzer::wylogowanieUzytkownika()
@@ -130,3 +137,9 @@ void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
 {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
+
+void UzytkownikMenedzer::dodajAdresata()
+{
+    adresatMenedzer.dodajAdresata();
+}
+

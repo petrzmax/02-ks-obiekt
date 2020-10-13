@@ -1,7 +1,6 @@
 #ifndef KSIAZKAADRESOWA_H
 #define KSIAZKAADRESOWA_H
 
-
 #include <iostream>
 
 #include "UzytkownikMenedzer.h"
@@ -21,6 +20,7 @@ public:
     void wylogowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wypiszWszystkichUzytkownikow();
+    void dodajAdresata();
 };
 
 #endif // KSIAZKAADRESOWA_H
