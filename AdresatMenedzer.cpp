@@ -16,6 +16,10 @@ void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
 {
     adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
 }
+void AdresatMenedzer::wyczyscAdresatowZPamieci()
+{
+    adresaci.clear();
+}
 
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {

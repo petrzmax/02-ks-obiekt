@@ -82,7 +82,7 @@ void UzytkownikMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUz
 void UzytkownikMenedzer::wylogowanieUzytkownika()
 {
     idZalogowanegoUzytkownika = 0;
-    //adresaci.clear();
+    adresatMenedzer.wyczyscAdresatowZPamieci();
 }
 
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
