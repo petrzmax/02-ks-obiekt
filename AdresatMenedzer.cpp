@@ -12,6 +12,11 @@ void AdresatMenedzer::dodajAdresata()
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
 }
 
+void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
+{
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+}
+
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;

@@ -32,5 +32,5 @@ void KsiazkaAdresowa::dodajAdresata()
 
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
-   uzytkownikMenedzer.wyswietlWszystkichAdresatow();
+    uzytkownikMenedzer.wyswietlWszystkichAdresatow();
 }
