@@ -56,6 +56,7 @@ void UzytkownikMenedzer::logowanieUzytkownika()
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     ustawIdZalogowanegoUzytkownika(itr -> pobierzId());
+                    wczytajAdresatowZalogowanegoUzytkownikaZPliku();
                     return;
                 }
             }
@@ -136,6 +137,11 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
 void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
 {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+}
+
+void UzytkownikMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
+{
+    adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
 }
 
 void UzytkownikMenedzer::dodajAdresata()

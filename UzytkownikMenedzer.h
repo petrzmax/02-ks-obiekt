@@ -33,6 +33,7 @@ public:
     Uzytkownik podajDaneNowegoUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku();
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
 
