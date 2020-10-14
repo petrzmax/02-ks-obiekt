@@ -16,7 +16,6 @@ public:
         : uzytkownikMenedzer(nazwaPlikuZUzytkownikami, nazwaPlikuZAdresatami)
     {
         uzytkownikMenedzer.wczytajUzytkownikowZPliku();
-        uzytkownikMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
     };
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
