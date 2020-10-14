@@ -33,6 +33,7 @@ public:
 
     void dodajAdresata();
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+    void wyczyscAdresatowZPamieci();
 
     void wyswietlWszystkichAdresatow();
 
