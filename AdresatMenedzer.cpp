@@ -14,7 +14,7 @@ void AdresatMenedzer::dodajAdresata()
 
 void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
 {
-    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika, idOstatniegoAdresata);
 }
 void AdresatMenedzer::wyczyscAdresatowZPamieci()
 {
