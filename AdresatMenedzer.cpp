@@ -9,62 +9,51 @@ void AdresatMenedzer::dodajAdresata()
     adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
-    plikZAdresatami.dopiszAdresataDoPliku(adresat);
-}
 
-void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
-{
-    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika, idOstatniegoAdresata);
-}
-void AdresatMenedzer::wyczyscAdresatowZPamieci()
-{
-    adresaci.clear();
+    if(plikZAdresatami.dopiszAdresataDoPliku(adresat))
+        cout << "Nowy adresat zostal dodany" << endl;
+    else
+        cout << "Blad. Nie udalo sie dodac nowego adresata do pliku." << endl;
+    system("pause");
 }
 
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
+    string imie, nazwisko, numerTelefonu, email, adres;
 
-    adresat.ustawId(++idOstatniegoAdresata);
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
-    adresat.ustawImie(zamienPierwszaLitereNaDuzaAPozostaleNaMale(MetodyPomocnicze::wczytajLinie()));
+    imie = MetodyPomocnicze::wczytajLinie();
+    imie = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(imie);
 
     cout << "Podaj nazwisko: ";
-    adresat.ustawNazwisko(zamienPierwszaLitereNaDuzaAPozostaleNaMale(MetodyPomocnicze::wczytajLinie()));
+    nazwisko = MetodyPomocnicze::wczytajLinie();
+    nazwisko = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nazwisko);
 
     cout << "Podaj numer telefonu: ";
-    adresat.ustawNumerTelefonu(MetodyPomocnicze::wczytajLinie());
+    numerTelefonu = MetodyPomocnicze::wczytajLinie();
 
     cout << "Podaj email: ";
-    adresat.ustawEmail(MetodyPomocnicze::wczytajLinie());
+    email = MetodyPomocnicze::wczytajLinie();
 
     cout << "Podaj adres: ";
-    adresat.ustawAdres(MetodyPomocnicze::wczytajLinie());
+    adres = MetodyPomocnicze::wczytajLinie();
+
+    adresat.ustawImie(imie);
+    adresat.ustawNazwisko(nazwisko);
+    adresat.ustawNumerTelefonu(numerTelefonu);
+    adresat.ustawEmail(email);
+    adresat.ustawAdres(adres);
 
     return adresat;
 }
 
-string AdresatMenedzer::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst)
-{
-    if (!tekst.empty())
-    {
-        transform(tekst.begin(), tekst.end(), tekst.begin(), ::tolower);
-        tekst[0] = toupper(tekst[0]);
-    }
-    return tekst;
-}
-
-void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
-{
-    idZalogowanegoUzytkownika = noweIdZalogowanegoUzytkownika;
-
-}
-
 int AdresatMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
-    return idZalogowanegoUzytkownika;
+    return ID_ZALOGOWANEGO_UZYTKOWNIKA;
 }
 
 void AdresatMenedzer::wyswietlWszystkichAdresatow()
