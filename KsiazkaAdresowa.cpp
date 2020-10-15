@@ -75,7 +75,6 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
     {
         adresatMenedzer->wyswietlWszystkichAdresatow();
-        adresatMenedzer->wyswietlWszystkichAdresatow();
     }
     else
     {
