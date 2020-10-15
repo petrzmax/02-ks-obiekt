@@ -33,6 +33,8 @@ public:
     void wypiszWszystkichUzytkownikow();
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 };
 
 #endif // KSIAZKAADRESOWA_H

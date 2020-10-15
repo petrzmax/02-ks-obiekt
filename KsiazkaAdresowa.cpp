@@ -49,7 +49,8 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
     {
-        adresatMenedzer->wyswietlWszystkichAdresatow();adresatMenedzer->wyswietlWszystkichAdresatow();
+        adresatMenedzer->wyswietlWszystkichAdresatow();
+        adresatMenedzer->wyswietlWszystkichAdresatow();
     }
     else
     {
@@ -58,3 +59,27 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
     }
 }
 
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
+{
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer->wyszukajAdresatowPoImieniu();
+    }
+    else
+    {
+        cout << "Aby wyswietlic adresatow, nalezy sie najpierw zalogowac" << endl;
+        system("pause");
+    }
+}
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
+{
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer->wyszukajAdresatowPoNazwisku();
+    }
+    else
+    {
+        cout << "Aby wyswietlic adresatow, nalezy sie najpierw zalogowac" << endl;
+        system("pause");
+    }
+}

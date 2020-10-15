@@ -21,6 +21,7 @@ class AdresatMenedzer
     Adresat podajDaneNowegoAdresata();
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     void wyswietlDaneAdresata(Adresat adresat);
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 
 
 public:
@@ -33,6 +34,9 @@ public:
     void dodajAdresata();
 
     void wyswietlWszystkichAdresatow();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+
     int pobierzIdZalogowanegoUzytkownika();
 
 };
