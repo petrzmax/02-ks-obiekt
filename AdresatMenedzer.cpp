@@ -21,7 +21,6 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
     string imie, nazwisko, numerTelefonu, email, adres;
-
     adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
     adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
