@@ -22,7 +22,10 @@ class UzytkownikMenedzer
 public:
     UzytkownikMenedzer(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
         : plikZUzytkownikami(nazwaPlikuZUzytkownikami),
-          adresatMenedzer(nazwaPlikuZAdresatami) {};
+          adresatMenedzer(nazwaPlikuZAdresatami)
+    {
+        uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+    };
 
 
     void rejestracjaUzytkownika();
@@ -32,7 +35,6 @@ public:
     void zmianaHaslaZalogowanegoUzytkownika();
     Uzytkownik podajDaneNowegoUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    void wczytajUzytkownikowZPliku();
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku();
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
