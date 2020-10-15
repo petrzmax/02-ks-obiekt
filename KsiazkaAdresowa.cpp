@@ -108,3 +108,8 @@ void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
         system("pause");
     }
 }
+
+bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
+{
+    return uzytkownikMenedzer.czyUzytkownikJestZalogowany();
+}

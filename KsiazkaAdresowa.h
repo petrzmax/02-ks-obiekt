@@ -37,6 +37,7 @@ public:
     void wyswietlWszystkichAdresatow();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
+    bool czyUzytkownikJestZalogowany();
 };
 
 #endif // KSIAZKAADRESOWA_H
