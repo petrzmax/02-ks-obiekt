@@ -75,7 +75,6 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
     {
         adresatMenedzer->wyswietlWszystkichAdresatow();
-        adresatMenedzer->wyswietlWszystkichAdresatow();
     }
     else
     {
@@ -107,4 +106,9 @@ void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
         cout << "Aby wyswietlic adresatow, nalezy sie najpierw zalogowac" << endl;
         system("pause");
     }
+}
+
+bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
+{
+    return uzytkownikMenedzer.czyUzytkownikJestZalogowany();
 }
