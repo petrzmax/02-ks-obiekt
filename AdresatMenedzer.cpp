@@ -240,32 +240,32 @@ void AdresatMenedzer::edytujAdresata()
                 nowaDana = MetodyPomocnicze::wczytajLinie();
                 nowaDana = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nowaDana);
                 adresaci[i].ustawImie(nowaDana);
-                zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
+                zaktualizujDaneWybranegoAdresata(adresaci[i]);
                 break;
             case '2':
                 cout << "Podaj nowe nazwisko: ";
                 nowaDana = MetodyPomocnicze::wczytajLinie();
                 nowaDana = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nowaDana);
                 adresaci[i].ustawNazwisko(nowaDana);
-                zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
+                zaktualizujDaneWybranegoAdresata(adresaci[i]);
                 break;
             case '3':
                 cout << "Podaj nowy numer telefonu: ";
                 nowaDana = MetodyPomocnicze::wczytajLinie();
                 adresaci[i].ustawNumerTelefonu(nowaDana);
-                zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
+                zaktualizujDaneWybranegoAdresata(adresaci[i]);
                 break;
             case '4':
                 cout << "Podaj nowy email: ";
                 nowaDana = MetodyPomocnicze::wczytajLinie();
                 adresaci[i].ustawEmail(nowaDana);
-                zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
+                zaktualizujDaneWybranegoAdresata(adresaci[i]);
                 break;
             case '5':
                 cout << "Podaj nowy adres zamieszkania: ";
                 nowaDana = MetodyPomocnicze::wczytajLinie();
                 adresaci[i].ustawAdres(nowaDana);
-                zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
+                zaktualizujDaneWybranegoAdresata(adresaci[i]);
                 break;
             case '6':
                 cout << endl << "Powrot do menu uzytkownika" << endl << endl;
@@ -302,12 +302,12 @@ char AdresatMenedzer::wybierzOpcjeZMenuEdycja()
     return wybor;
 }
 
-void AdresatMenedzer::zaktualizujDaneWybranegoAdresata(Adresat adresat, int idEdytowanegoAdresata)
+void AdresatMenedzer::zaktualizujDaneWybranegoAdresata(Adresat adresat)
 {
     int numerLiniiEdytowanegoAdresata = 0;
     string liniaZDanymiAdresata = "";
 
-    numerLiniiEdytowanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(idEdytowanegoAdresata);
+    numerLiniiEdytowanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(adresat.pobierzId());
     liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
     plikZAdresatami.edytujWybranaLinieWPliku(numerLiniiEdytowanegoAdresata, liniaZDanymiAdresata);
 
