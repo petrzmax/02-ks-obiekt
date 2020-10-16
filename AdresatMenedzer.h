@@ -37,7 +37,7 @@ public:
 
     void dodajAdresata();
     void edytujAdresata();
-    int usunAdresata();
+    void usunAdresata();
 
     void wyswietlWszystkichAdresatow();
     void wyszukajAdresatowPoImieniu();
