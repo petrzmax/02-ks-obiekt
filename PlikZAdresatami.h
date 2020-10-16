@@ -17,7 +17,6 @@ class PlikZAdresatami : public PlikTekstowy
     const string NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI;
     int idOstatniegoAdresata;
 
-    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
@@ -31,14 +30,14 @@ public:
 
     bool dopiszAdresataDoPliku(Adresat adresat);
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
-
+    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     void edytujAdresataWPliku(string liniaZDanymiAdresataOddzielonePionowymiKreskami);
     void usunWybranegoAdresataZPliku(int idUsuwanegoAdresata);
+    void aktualizujIdOstatniegoAdresata(int idUsuwanegoAdresata);
 
     int pobierzZPlikuIdOstatniegoAdresata();
-
     int pobierzIdOstatniegoAdresata();
-    void aktualizujIdOstatniegoAdresata(int idUsuwanegoAdresata);
+
 
 };
 
