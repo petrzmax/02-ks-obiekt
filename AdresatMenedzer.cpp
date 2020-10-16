@@ -184,7 +184,7 @@ void AdresatMenedzer::usunAdresata()
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
 
-                plikZAdresatami.ustawIdOstatniegoAdresata(podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsuwanegoAdresata));
+                plikZAdresatami.aktualizujIdOstatniegoAdresata(idUsuwanegoAdresata);
                 return;
             }
             else
@@ -329,10 +329,4 @@ string AdresatMenedzer::zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKre
     return liniaZDanymiAdresata;
 }
 
-int AdresatMenedzer::podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata)
-{
-    if (idUsuwanegoAdresata == plikZAdresatami.pobierzIdOstatniegoAdresata())
-        return plikZAdresatami.pobierzZPlikuIdOstatniegoAdresata();
-    else
-        return plikZAdresatami.pobierzIdOstatniegoAdresata();
-}
+

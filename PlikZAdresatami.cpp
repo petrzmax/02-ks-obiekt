@@ -148,9 +148,9 @@ int PlikZAdresatami::pobierzIdOstatniegoAdresata()
     return idOstatniegoAdresata;
 }
 
-void PlikZAdresatami::ustawIdOstatniegoAdresata(int idOstatniegoAdresata)
+void PlikZAdresatami::aktualizujIdOstatniegoAdresata(int idUsuwanegoAdresata)
 {
-    this->idOstatniegoAdresata = idOstatniegoAdresata;
+    idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsuwanegoAdresata);
 }
 
 int PlikZAdresatami::zwrocNumerLiniiSzukanegoAdresata(int idAdresata)
@@ -290,4 +290,12 @@ int PlikZAdresatami::pobierzZPlikuIdOstatniegoAdresata()
         idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
     }
     return idOstatniegoAdresata;
+}
+
+int PlikZAdresatami::podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata)
+{
+    if (idUsuwanegoAdresata == idOstatniegoAdresata)
+        return pobierzZPlikuIdOstatniegoAdresata();
+    else
+        return idOstatniegoAdresata;
 }
