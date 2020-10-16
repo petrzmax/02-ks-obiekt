@@ -30,11 +30,13 @@ public:
 
     bool dopiszAdresataDoPliku(Adresat adresat);
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
-
-    int pobierzIdOstatniegoAdresata();
     int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
     void usunWybranaLinieWPliku(int numerUsuwanejLinii);
     void edytujWybranaLinieWPliku(int numerEdytowanejLinii, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
+
+    int pobierzIdOstatniegoAdresata();
+    void ustawIdOstatniegoAdresata(int idOstatniegoAdresata);
+    int pobierzZPlikuIdOstatniegoAdresata();
 };
 
 #endif // PLIKZADRESATAMI_H
